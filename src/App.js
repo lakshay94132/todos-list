@@ -4,7 +4,7 @@ import Header from './MyComponents/Header';
 import Todos from './MyComponents/Todos';
 import Footer from './MyComponents/Footer';
 import AddTodo from './MyComponents/AddTodo';
-import about from './MyComponents/about';
+
 
 import {
   BrowserRouter as Router,
@@ -70,9 +70,7 @@ function App() {
             }}>
             </Route>
 
-          <Route exact path="/about">
-            <about />
-          </Route>
+          <Route path="/About" element={<About />} />
 
         </Routes>
 
