@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import Header from './MyComponents/Header';
 import Todos from './MyComponents/Todos';
@@ -5,11 +6,14 @@ import Footer from './MyComponents/Footer';
 
 
 function App() {
-  const onDelete= () =>{
+  const onDelete= (todo) =>{
     console.log("I am onDelete of todo");
-    
+    setTodos(todos.filter((e)=>{
+      return e!==todo;
+    }))
   }
-  let todos = [
+
+    const [ todos, setTodos ] = useState([
     {
       sno: 1,
       title: "Go to the market",
@@ -25,7 +29,9 @@ function App() {
       title: "Go to the gym",
       desc: "You need to go to the gym to exercise"
     }
-  ]
+  ]);
+
+    
   return (
     <>
       <Header  title= "MyTodoList" />
