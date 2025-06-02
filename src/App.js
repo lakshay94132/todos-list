@@ -4,11 +4,11 @@ import Header from './MyComponents/Header';
 import Todos from './MyComponents/Todos';
 import Footer from './MyComponents/Footer';
 import AddTodo from './MyComponents/AddTodo';
-import About from './MyComponents/about';
+import about from './MyComponents/about';
 
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 
@@ -59,7 +59,7 @@ function App() {
       <>
         <Router>
           <Header title="MyTodoList" />
-          <Switch>
+          <Routes>
 
             <Route exact path="/" render={() => {
               return(
@@ -70,11 +70,11 @@ function App() {
             }}>
             </Route>
 
-          <route exact path="/about">
+          <Route exact path="/about">
             <about />
-          </route>
+          </Route>
 
-        </Switch>
+        </Routes>
 
         <Footer />
       </Router >
