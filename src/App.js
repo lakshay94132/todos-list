@@ -3,6 +3,7 @@ import './App.css';
 import Header from './MyComponents/Header';
 import Todos from './MyComponents/Todos';
 import Footer from './MyComponents/Footer';
+import AddTodo from './MyComponents/AddTodo';
 
 
 function App() {
@@ -11,6 +12,10 @@ function App() {
     setTodos(todos.filter((e)=>{
       return e!==todo;
     }))
+  }
+
+  const addTodo =(title, desc) => {
+    console.log("I am adding this todo", title, desc);
   }
 
     const [ todos, setTodos ] = useState([
@@ -35,9 +40,9 @@ function App() {
   return (
     <>
       <Header  title= "MyTodoList" />
-      <Footer />
+      <AddTodo addTodo={addTodo}/>
       <Todos  todos={todos} onDelete={onDelete}/>
-      
+      <Footer />
 
     </>
   );
