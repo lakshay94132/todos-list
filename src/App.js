@@ -2,8 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  let myvar = 10;
   return (
     <div className="App">
+      <div>{myvar}</div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
