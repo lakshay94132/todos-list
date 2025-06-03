@@ -7,7 +7,7 @@ const Todos = (props) => {
         margin: "40px auto"
     }
     return (
-        <div className="Conatiner " style={myStyle} >
+        <div className="conatiner " style={myStyle} >
 
             <h3 className="text-center my-3"> Todos List </h3>
             {props.todos.length === 0 ? "No Todos to display" :
